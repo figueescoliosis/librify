@@ -64,7 +64,6 @@ export const actualizarUsuario = async (id, usuario) => {
     return true;
 };
 
-// Subir imagen a Firebase Storage y obtener URL
 export const uploadImage = async (file) => {
     const storageRef = ref(storage, `images/${file.name}`);
     await uploadBytes(storageRef, file);
